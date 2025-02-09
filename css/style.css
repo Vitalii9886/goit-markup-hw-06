@@ -23,9 +23,10 @@ ul {
 }
 
 .container {
-    width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 100%;
+    max-width: 320px;
+    padding-left: 16px;
+    padding-right: 16px;
     margin: 0 auto;
 }
 
@@ -200,7 +201,7 @@ img {
 
 /* ------advantages------ */
 .advantages {
-    padding: 120px 0 120px;
+    padding: 96px 0 96px;
 }
 
 .advantages-list-icons {
@@ -210,6 +211,7 @@ img {
     height: 112px;
     background-color: #f4f4fd;
     display: flex;
+
     align-items: center;
     justify-content: center;
     margin-bottom: 8px;
@@ -230,26 +232,35 @@ img {
 
 .advantages-list {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    /* gap: 24px; */
+    gap: 72px;
 }
 
 .advantages-item {
-    flex-basis: calc((100% - 72px) / 4);
+    /* flex-basis: calc((100% - 72px) / 4); */
+
+    width: 100%;
 }
 
 .advantages-title {
     color: #2e2f42;
-    font-size: 20px;
+    /* font-size: 20px;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.2; */
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
     letter-spacing: 0.02em;
+    text-align: center;
     margin-bottom: 8px;
 }
 
 .advantages-text {
     color: #434455;
     font-size: 16px;
-    font-weight: 400;
+    /* font-weight: 400; */
+    font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
@@ -257,18 +268,27 @@ img {
 /* -----team----- */
 .team {
     background: #f4f4fd;
-    padding: 120px 0 120px;
+    /* padding: 120px 0 120px; */
+    padding: 96px 0 96px;
+}
+
+.container-team {
+    padding-left: 28px;
+    padding-right: 28px;
 }
 
 .team-item {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    /* gap: 24px; */
+    gap: 72px;
 }
 
 .team-card {
     background: #ffffff;
     border-radius: 0 0 4px 4px;
-    flex-basis: calc((100% - 72px) / 4);
+    width: 100%;
+    /* flex-basis: calc((100% - 72px) / 4); */
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -304,7 +324,6 @@ img {
 
 .team-profession {
     color: #434455;
-    font-family: Roboto;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
@@ -346,8 +365,10 @@ img {
 
 /* -----portfolio------- */
 .portfolio {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    /* padding-top: 120px;
+    padding-bottom: 120px; */
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .portfolio-title {
@@ -365,14 +386,14 @@ img {
 .portfolio-item {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 48px;
-
+    /* column-gap: 24px;
+    row-gap: 48px; */
+    gap: 48px;
 }
 
 .portfolio-card {
-
-    flex-basis: calc((100% - 48px) / 3);
+    width: 100%;
+    /* flex-basis: calc((100% - 48px) / 3); */
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
@@ -439,7 +460,8 @@ img {
 /* ----footer----- */
 .footer {
     background: #2e2f42;
-    padding: 100px 0 100px
+    /* padding: 100px 0 100px */
+    padding: 96px 0 96px
 }
 
 .logo-white {
@@ -448,7 +470,9 @@ img {
 
 .footer-logo {
     display: inline-block;
-    margin-bottom: 16px;
+    /* margin-bottom: 16px; */
+    margin: 0 auto;
+
 }
 
 .footer-tex {
@@ -458,7 +482,8 @@ img {
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    max-width: 264px;
+    /* max-width: 264px; */
+    max-width: 288px;
 }
 
 .media-text {
@@ -467,6 +492,7 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #fff;
+    text-align: center;
     margin-bottom: 16px;
 }
 
@@ -483,15 +509,25 @@ img {
 .container-soc {
     width: 208px;
     height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin: 0 40px;
 }
 
 .footer-container {
     display: flex;
-    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 72px;
+    /* align-items: baseline; */
 }
 
 .footer-item {
-    margin-right: 120px;
+    /* margin-right: 120px; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
 
 }
 
@@ -516,6 +552,88 @@ img {
 .footer-soc-icon:focus {
     background-color: #31d0aa;
 }
+
+.footer-win {
+    /* margin-left: 80px; */
+}
+
+.footer-win-tex {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.footer-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.footer-input {
+    /* width: 264px;
+     */
+    width: 288px;
+    height: 40px;
+    padding-left: 16px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    color: #ffffff;
+}
+
+.footer-input::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+}
+
+.footer-btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 8px 24px;
+    background: #4d5ae5;
+    fill: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 165px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-btn:focus {
+    background-color: #31D0AA;
+}
+
+.footer-btn:hover {
+    background-color: #31D0AA;
+}
+
+.btn-icon {
+    margin-left: 16px;
+}
+
+/* backdrop */
 
 .backdrop {
     position: fixed;
@@ -613,86 +731,11 @@ img {
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
-    margin-top: 72px;
     margin-bottom: 16px;
 
 }
 
-.footer-win {
-    margin-left: 80px;
-}
 
-.footer-win-tex {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #fff;
-    margin-bottom: 16px;
-}
-
-.footer-form {
-    display: flex;
-    gap: 24px;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
-.footer-input {
-    width: 264px;
-    height: 40px;
-    padding-left: 16px;
-    border: 1px solid #fff;
-    border-radius: 4px;
-    background-color: transparent;
-    font-size: 12px;
-    line-height: 2;
-    letter-spacing: 0.04em;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    color: #ffffff;
-}
-
-.footer-input::placeholder {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 2;
-    letter-spacing: 0.04em;
-    color: #ffffff;
-}
-
-.footer-btn {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    text-align: center;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    padding: 8px 24px;
-    background: #4d5ae5;
-    fill: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 165px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer-btn:focus {
-    background-color: #31D0AA;
-}
-
-.footer-btn:hover {
-    background-color: #31D0AA;
-}
-
-.btn-icon {
-    margin-left: 16px;
-}
 
 /* .footer-input-blok {
     display: flex;
@@ -790,7 +833,7 @@ img {
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
-    
+
     align-items: center;
 }
 
@@ -812,7 +855,7 @@ img {
     justify-content: center;
     fill: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+
 }
 
 .modal-check-box {
@@ -854,4 +897,151 @@ img {
 
 .modal-btn:focus {
     background: #404bbf
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+
+    .advantages-list {
+        gap: 72px 24px;
+    }
+
+    .advantages-item {
+        width: calc((100% - 24px) / 2);
+    }
+
+    .advantages-title {
+        text-align: left;
+    }
+
+    .container-team {
+        padding-left: 108px;
+        padding-right: 108px;
+    }
+
+    .team-item {
+        gap: 64px 24px;
+    }
+
+    .team-card {
+
+        width: calc((100% - 24px) / 2);
+    }
+
+    .portfolio-item {
+        gap: 72px 24px;
+    }
+
+    .portfolio-card {
+        max-width: 356px;
+        flex-basis: calc((100% - 24px) / 2);
+    }
+
+    .footer-container {
+        padding-left: 108px;
+        gap: 72px 24px;
+    }
+
+    .footer-logo {
+        margin-bottom: 16px;
+    }
+
+    .footer-item {
+        display: block;
+    }
+
+    .container-soc {
+        display: block;
+        margin: 0;
+    }
+
+    .media-text {
+        text-align: left;
+    }
+
+    .footer-win-tex {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1128px;
+        padding-left: 0;
+        padding-right: 0;
+
+    }
+
+    .advantages {
+        padding: 120px 0 120px;
+    }
+
+    .advantages-item {
+        flex-basis: calc((100% - 72px) / 4);
+    }
+
+    .advantages-list {
+        gap: 24px;
+    }
+
+    .advantages-title {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    .advantages-text {
+        font-weight: 400;
+        letter-spacing: 0.02em;
+    }
+
+    .team {
+        padding: 120px 0 120px;
+    }
+
+    .team-item {
+        gap: 24px;
+    }
+
+    .team-card {
+        flex-basis: calc((100% - 72px) / 4);
+    }
+
+    .portfolio {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .portfolio-item {
+        column-gap: 24px;
+        row-gap: 48px;
+    }
+
+    .portfolio-card {
+        flex-basis: calc((100% - 48px) / 3);
+    }
+
+    .footer {
+        padding: 100px 0 100px
+    }
+
+    .footer-tex {
+        max-width: 264px;
+    }
+
+    .footer-container {
+        align-items: baseline;
+        gap: 0;
+    }
+        .footer-item {
+            margin-right: 120px;
+        }
+                .footer-win{
+                margin-left: 80px;
+                }
+                                .footer-input{
+                                width: 264px;
+                                }
 }
