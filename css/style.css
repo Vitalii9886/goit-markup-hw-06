@@ -150,27 +150,38 @@ img {
 /* ------main------ */
 .main {
     background: #2e2f42;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-mob.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding-top: 188px;
+    /* padding-top: 188px;
     padding-bottom: 188px;
-    max-width: 1440px;
+    max-width: 1440px; */
+    padding: 72px 36px;
     margin: 0 auto;
+    max-width: 320px;
 
+}
+@media screen and (min-resolution: 2x) {
+    .main {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-mob-2x.jpg);
+    }
 }
 
 .main-title {
     color: #ffffff;
-    font-size: 56px;
+    /* font-size: 56px; */
+    font-size: 36px;
     font-weight: 700;
-    line-height: 1.07;
+    /* line-height: 1.07; */
+    line-height: 1.11;
     letter-spacing: 0.02em;
     text-align: center;
-    max-width: 496px;
+    /* max-width: 496px; */
+    max-width: 216px;
     margin: 0 auto;
-    margin-bottom: 48px;
+    /* margin-bottom: 48px; */
+    margin-bottom: 72px;
 }
 
 .button {
@@ -900,8 +911,28 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+
     .container {
         max-width: 768px;
+    }
+
+    .main {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-tab.jpg);
+        max-width: 768px;
+        padding: 112px 120px;
+
+    }
+        @media screen and (min-resolution: 2x) {
+            .main {
+                background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-tab-2x.jpg);
+            }
+        }
+
+    .main-title {
+        font-size: 56px;
+        line-height: 1.07;
+        max-width: 496px;
+        margin-bottom: 36px;
     }
 
     .advantages-list {
@@ -974,6 +1005,22 @@ img {
 
     }
 
+    .main {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+        padding-top: 188px;
+        padding-bottom: 188px;
+        max-width: 1440px;
+    }
+        @media screen and (min-resolution: 2x) {
+            .main {
+                background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-2x.jpg);
+            }
+        }
+
+    .main-title {
+        margin-bottom: 48px;
+    }
+
     .advantages {
         padding: 120px 0 120px;
     }
@@ -1035,13 +1082,16 @@ img {
         align-items: baseline;
         gap: 0;
     }
-        .footer-item {
-            margin-right: 120px;
-        }
-                .footer-win{
-                margin-left: 80px;
-                }
-                                .footer-input{
-                                width: 264px;
-                                }
+
+    .footer-item {
+        margin-right: 120px;
+    }
+
+    .footer-win {
+        margin-left: 80px;
+    }
+
+    .footer-input {
+        width: 264px;
+    }
 }
