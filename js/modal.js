@@ -1,19 +1,31 @@
 
-    (() => {
-        const refs = {
-            // Додати атрибут data-modal-open на кнопку відкриття
-            openModalBtn: document.querySelector("[data-modal-open]"),
-            // Додати атрибут data-modal-close на кнопку закриття
-            closeModalBtn: document.querySelector("[data-modal-close]"),
-            // Додати атрибут data-modal на бекдроп модалки
-            modal: document.querySelector("[data-modal]"),
-        };
+(() => {
+    const refs = {
+        openModalBtns: document.querySelectorAll("[data-modal-open]"),
+        closeModalBtns: document.querySelectorAll("[data-modal-close]"),
+    };
 
-        refs.openModalBtn.addEventListener("click", toggleModal);
-        refs.closeModalBtn.addEventListener("click", toggleModal);
+    // Додаємо обробник подій для кожної кнопки відкриття
+    refs.openModalBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const modalId = btn.getAttribute("data-modal-open"); // Отримуємо ID модального вікна
+            const modal = document.querySelector(`[data-modal="${modalId}"]`);
+            if (modal) modal.classList.add("is-open");
+        });
+    });
 
-        function toggleModal() {
-            // is-open це клас який буде додаватися/забиратися на бекдроп при натисканні на кнопки
-            refs.modal.classList.toggle("is-open");
+    // Додаємо обробник подій для кожної кнопки закриття
+    refs.closeModalBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const modal = btn.closest("[data-modal]"); // Знаходимо батьківське модальне вікно
+            if (modal) modal.classList.remove("is-open");
+        });
+    });
+
+    // Закриття при кліку на бекдроп
+    window.addEventListener("click", (event) => {
+        if (event.target.hasAttribute("data-modal")) {
+            event.target.classList.remove("is-open");
         }
-    })();
+    });
+})();
