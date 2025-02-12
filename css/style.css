@@ -798,10 +798,13 @@ img {
     top: 50%;
     left: 50%;
 
-    width: 408px;
-    min-height: 584px;
+    /* width: 408px;
+    min-height: 584px; */
+    width: 288px;
+        min-height: 623px;
     border-radius: 4px;
-    padding: 72px 24px 24px 24px;
+    /* padding: 72px 24px 24px 24px; */
+    padding: 72px 16px 24px 16px;
     transform: translate(-50%, -50%);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background-color: #fcfcfc;
@@ -967,7 +970,7 @@ img {
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
-
+display: flex;
     align-items: center;
 }
 
@@ -988,6 +991,7 @@ img {
     align-items: center;
     justify-content: center;
     fill: transparent;
+    flex-shrink: 0;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
@@ -995,6 +999,7 @@ img {
 .modal-check-box {
     margin-bottom: 24px;
     margin-top: 8px;
+    
 }
 
 .modal-check:checked+.modal-check-tex .modal-check-item {
@@ -1143,6 +1148,11 @@ img {
     .footer-win-tex {
         text-align: left;
     }
+        .modal{
+            width: 408px;
+                min-height: 584px;
+                padding: 72px 24px 24px 24px;
+        }
 }
 
 @media screen and (min-width: 1158px) {
